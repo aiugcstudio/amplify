@@ -169,7 +169,7 @@ strong { color: var(--ink); font-weight: 600; }
   0% { box-shadow: 0 0 0 0 color-mix(in srgb, var(--accent) 55%, transparent); }
   70%, 100% { box-shadow: 0 0 0 9px color-mix(in srgb, var(--accent) 0%, transparent); }
 }
-.hero-title { font-family: var(--hero-font); font-weight: 400; font-size: clamp(2.7rem, 1.5rem + 3.5vw, 4.7rem); line-height: 1.08; letter-spacing: -0.005em; max-width: 26ch; margin: 0 auto 28px; color: var(--ink); }
+.hero-title { font-family: var(--display); font-weight: 400; font-size: clamp(2.5rem, 1.4rem + 3.1vw, 4.3rem); line-height: 1.08; letter-spacing: -0.018em; max-width: 26ch; margin: 0 auto 28px; color: var(--ink); }
 .hero-title em { font-style: italic; }
 .hero-sub { max-width: 66ch; margin: 0 auto 38px; color: var(--ink-2); }
 .hero-cta { display: flex; flex-wrap: wrap; align-items: center; justify-content: center; gap: 14px 16px; }
