@@ -169,7 +169,7 @@ strong { color: var(--ink); font-weight: 600; }
   0% { box-shadow: 0 0 0 0 color-mix(in srgb, var(--accent) 55%, transparent); }
   70%, 100% { box-shadow: 0 0 0 9px color-mix(in srgb, var(--accent) 0%, transparent); }
 }
-.hero-title { font-family: var(--display); font-weight: 400; font-size: clamp(2.5rem, 1.4rem + 3.1vw, 4.3rem); line-height: 1.08; letter-spacing: -0.018em; max-width: 26ch; margin: 0 auto 28px; color: var(--ink); }
+.hero-title { font-family: var(--display); font-weight: 400; font-size: clamp(2.3rem, 1.3rem + 2.8vw, 3.9rem); line-height: 1.08; letter-spacing: -0.018em; max-width: 34ch; margin: 0 auto 28px; color: var(--ink); }
 .hero-title em { font-style: italic; }
 .hero-sub { max-width: 66ch; margin: 0 auto 38px; color: var(--ink-2); }
 .hero-cta { display: flex; flex-wrap: wrap; align-items: center; justify-content: center; gap: 14px 16px; }
@@ -214,7 +214,7 @@ strong { color: var(--ink); font-weight: 600; }
 .stat:first-child { border-left: none; padding-left: 0; }
 .stat-n { display: block; font-family: var(--display); font-weight: 400; font-size: clamp(2.8rem, 2rem + 2.4vw, 4.2rem); line-height: 1; color: var(--ink); letter-spacing: -0.02em; }
 .stat .rule { margin: 22px 0 16px; }
-.stat-l { display: block; font-size: 0.78rem; letter-spacing: 0.08em; text-transform: uppercase; color: var(--ink-3); line-height: 1.5; }
+.stat-l { display: block; font-size: 0.84rem; font-weight: 500; letter-spacing: 0.06em; text-transform: uppercase; color: var(--ink-2); line-height: 1.5; }
 
 .quote { max-width: 900px; margin: 0 auto; text-align: center; }
 .quote::before { content: '\201C'; display: block; font-family: var(--display); font-size: 4.5rem; line-height: 0.5; color: var(--ink-3); margin-bottom: 22px; }
@@ -283,10 +283,10 @@ strong { color: var(--ink); font-weight: 600; }
 .about { display: grid; grid-template-columns: 220px 1fr; gap: clamp(40px, 6vw, 80px); align-items: center; max-width: 1000px; }
 .about-aside { display: flex; flex-direction: column; align-items: center; gap: 18px; }
 .mono { width: 180px; height: 180px; display: grid; place-items: center; border-radius: 50%; border: 1px solid var(--line-2); background: var(--surface); color: var(--ink); font-family: var(--display); font-size: 5.5rem; }
-.mono-label { font-size: 0.76rem; letter-spacing: 0.1em; text-transform: uppercase; color: var(--ink-3); }
+.mono-label { font-size: 0.86rem; font-weight: 500; letter-spacing: 0.08em; text-transform: uppercase; color: var(--ink-2); }
 .about-body .eyebrow { margin-bottom: 18px; }
 .about-body .h2 { margin-bottom: 22px; }
-.about-body p { color: var(--ink-2); margin-bottom: 16px; }
+.about-body p { color: var(--ink-2); font-size: 1.08rem; line-height: 1.65; margin-bottom: 16px; }
 .about-body .lead { color: var(--ink); font-family: var(--display); font-style: italic; font-size: 1.5rem; line-height: 1.4; }
 
 /* ---------- CTA band ---------- */
@@ -318,7 +318,7 @@ strong { color: var(--ink); font-weight: 600; }
 .book .sec-head { text-align: center; margin-inline: auto; }
 .book .sec-head .eyebrow { justify-content: center; }
 .book .sec-intro { margin-inline: auto; }
-.calendly-wrap { max-width: 1000px; margin: clamp(30px, 4vw, 48px) auto 0; text-align: center; }
+.calendly-wrap { max-width: 720px; margin: clamp(30px, 4vw, 48px) auto 0; text-align: center; }
 .calendly-embed { min-width: 320px; height: 700px; border: 1px solid var(--line); border-radius: var(--radius-lg); overflow: hidden; background: var(--surface); box-shadow: var(--shadow-sm); }
 .calendly-fallback { display: inline-block; margin-top: 18px; font-size: 0.86rem; color: var(--ink-3); }
 .calendly-fallback:hover { color: var(--ink); }
@@ -443,22 +443,22 @@ em, .em { color: var(--accent); }
 .guar-metrics { display: grid; gap: 12px; max-width: 640px; margin: 0 auto 28px; }
 .guar-metric { display: flex; flex-wrap: wrap; align-items: baseline; justify-content: center; gap: 8px 16px; padding: 16px 22px; background: var(--bg-2); border-radius: 14px; }
 .guar-tier { font-size: 0.72rem; font-weight: 600; letter-spacing: 0.1em; text-transform: uppercase; color: var(--accent); }
-.guar-val { font-family: var(--display); font-size: 1.12rem; color: var(--ink); }
+.guar-val { font-family: var(--display); font-size: 1.42rem; color: var(--ink); }
 .guar-refund { display: flex; flex-wrap: wrap; justify-content: center; gap: 12px; margin-bottom: 30px; }
 .guar-refund li { display: flex; flex-direction: column; gap: 5px; padding: 14px 22px; border: 1px solid var(--line); border-radius: 14px; }
-.guar-refund .g-key { font-size: 0.84rem; color: var(--ink-2); }
-.guar-refund .g-val { font-family: var(--display); font-style: italic; color: var(--accent); font-size: 1.08rem; }
+.guar-refund .g-key { font-size: 0.96rem; color: var(--ink-2); }
+.guar-refund .g-val { font-family: var(--display); font-style: italic; color: var(--accent); font-size: 1.32rem; }
 .guar-fine { max-width: 660px; margin: 0 auto; text-align: left; }
-.guar-fine p { font-size: 0.92rem; color: var(--ink-2); margin-bottom: 12px; line-height: 1.6; }
+.guar-fine p { font-size: 1.02rem; color: var(--ink-2); margin-bottom: 12px; line-height: 1.6; }
 .guar-fine strong { color: var(--ink); }
 .guar-close { text-align: center !important; font-family: var(--display); font-style: italic; font-size: clamp(1.15rem, 1rem + 0.6vw, 1.45rem); color: var(--ink) !important; margin-top: 10px !important; }
 
 /* ---------- who it's for ---------- */
 .whofor { display: grid; border-top: 1px solid var(--line); }
-.whofor li { position: relative; padding: 18px 0 18px 38px; border-bottom: 1px solid var(--line); color: var(--ink); font-size: 1.05rem; }
+.whofor li { position: relative; padding: 18px 0 18px 38px; border-bottom: 1px solid var(--line); color: var(--ink); font-size: 1.18rem; }
 .whofor li::before { content: ''; position: absolute; left: 5px; top: 22px; width: 7px; height: 12px; border: solid var(--accent); border-width: 0 2px 2px 0; transform: rotate(45deg); }
 .whofor strong { color: var(--ink); font-weight: 600; }
-.whofor-not { margin-top: 28px; text-align: center; color: var(--ink-3); font-size: 1.05rem; font-style: italic; font-family: var(--display); }
+.whofor-not { margin-top: 28px; text-align: center; color: var(--ink-2); font-size: 1.25rem; font-style: italic; font-family: var(--display); }
 
 /* ---------- book ask ---------- */
 .book-ask { margin: 20px auto 0; max-width: 60ch; font-size: 0.96rem; color: var(--ink); background: var(--surface); border: 1px dashed color-mix(in srgb, var(--accent) 40%, transparent); border-radius: var(--radius); padding: 16px 22px; }
