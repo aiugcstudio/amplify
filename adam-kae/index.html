@@ -62,16 +62,16 @@
 
     .hero{position:relative;overflow:hidden;padding-top:clamp(48px,6vw,86px)}
     .hero::before{content:'';position:absolute;top:-20%;left:50%;transform:translateX(-50%);width:min(880px,90%);height:520px;background:radial-gradient(ellipse at center,var(--accent-soft),transparent 68%);opacity:.6;z-index:0}
-    .hero-in{position:relative;z-index:1;max-width:1160px}
+    .hero-in{position:relative;z-index:1;max-width:1160px;text-align:center;margin:0 auto}
     .hero .h1{margin:8px 0 24px}
-    .hero-sub{font-size:clamp(1.12rem, 1rem + .5vw, 1.38rem);color:var(--ink-2);max-width:860px;line-height:1.55}
-    .hero-cta{display:flex;flex-wrap:wrap;gap:14px;margin-top:36px}
+    .hero-sub{font-size:clamp(1.12rem, 1rem + .5vw, 1.38rem);color:var(--ink-2);max-width:860px;line-height:1.55;margin-inline:auto}
+    .hero-cta{display:flex;flex-wrap:wrap;gap:14px;margin-top:36px;justify-content:center}
     .hero-guar{margin-top:30px;font-size:.98rem;color:var(--ink-2);display:flex;align-items:center;gap:10px}
     .hero-guar b{color:var(--ink);font-weight:600}
     .dot{width:8px;height:8px;border-radius:50%;background:var(--accent);flex:none;box-shadow:0 0 0 4px var(--accent-soft)}
 
     /* KPI row: much bigger per request */
-    .kpis{display:grid;grid-template-columns:repeat(3,1fr);gap:0;margin-top:clamp(52px,7vw,84px);border-top:1px solid var(--line)}
+    .kpis{display:grid;grid-template-columns:repeat(3,1fr);gap:0;margin-top:clamp(52px,7vw,84px);border-top:1px solid var(--line);text-align:left}
     .kpi{padding:38px clamp(14px,2vw,28px) 0;border-left:1px solid var(--line)}
     .kpi:first-child{border-left:none;padding-left:0}
     .kpi-n{font-family:var(--display);font-size:clamp(2.7rem, 2rem + 2.4vw, 4rem);line-height:1;color:var(--accent);letter-spacing:-.02em}
@@ -181,7 +181,7 @@
     details[open] summary::after{transform:rotate(45deg)}
     details .a{padding:0 40px 26px 0;color:var(--ink-2);font-size:1.02rem}
 
-    .about{max-width:940px}
+    .about{max-width:1120px}
     .about p{color:var(--ink-2);margin-bottom:16px;font-size:1.08rem;line-height:1.65}
     .cta-band{text-align:center}
     .cta-band .h2{margin-bottom:16px}
@@ -538,7 +538,6 @@
       <h2 class="h2" style="margin-bottom:22px">My name is Serafino.</h2>
       <p>I run delivery at Amplify. I'm the one rebuilding your workflows. I spent 5-plus years building and operating SaaS and B2B companies. I came up on the operator side and learned to fix the exact bottlenecks I was hitting. I speak ROI, capacity, and P&amp;L.</p>
       <p>Unlike consultants who hand you a deck, I rebuild. You get working systems that generate revenue from day one, and you own them.</p>
-      <p style="color:var(--ink-3);font-size:.95rem">amplifyai.work · hello@amplifyai.work</p>
     </div>
   </section>
 
