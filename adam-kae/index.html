@@ -80,7 +80,7 @@
     .grid-3{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}
     .grid-2{display:grid;grid-template-columns:repeat(2,1fr);gap:22px}
     .card{background:var(--surface);border:1px solid var(--line);border-radius:var(--radius-lg);padding:clamp(26px,3vw,36px);box-shadow:var(--shadow-sm)}
-    .card .tag{font-size:.8rem;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:var(--accent);margin-bottom:14px;display:block}
+    .card .tag{font-size:1.15rem;font-weight:700;letter-spacing:.09em;text-transform:uppercase;color:var(--accent);margin-bottom:16px;display:block}
     .card h3{margin-bottom:14px}
     .card p{color:var(--ink-2)}
     .card .kv{margin-top:16px;font-size:.98rem;color:var(--ink-2)}
@@ -113,7 +113,7 @@
     /* horizontal bottlenecks */
     .bn-list{display:grid;gap:22px}
     .bn-card{background:var(--surface);border:1px solid var(--line);border-radius:var(--radius-lg);padding:clamp(28px,3.2vw,44px);box-shadow:var(--shadow-sm);display:grid;grid-template-columns:1.05fr 1fr;gap:clamp(28px,3.5vw,54px);align-items:start}
-    .bn-card .tag{font-size:.8rem;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:var(--accent);margin-bottom:14px;display:block}
+    .bn-card .tag{font-size:1.15rem;font-weight:700;letter-spacing:.09em;text-transform:uppercase;color:var(--accent);margin-bottom:16px;display:block}
     .bn-card h3{margin-bottom:14px}
     .bn-main p{color:var(--ink-2)}
     .bn-aside .math{margin-top:0}
@@ -125,12 +125,13 @@
     .is-metric .is-l{display:block;font-size:1.02rem;color:var(--ink-2);margin-top:8px}
     .is-plus{font-family:var(--display);font-size:2.6rem;color:var(--ink-3);margin:14px 0}
 
-    .tools{display:grid;grid-template-columns:repeat(2,1fr);gap:20px}
-    .tool{background:var(--surface);border:1px solid var(--line);border-radius:var(--radius);padding:24px 26px;box-shadow:var(--shadow-sm)}
+    .tools{display:grid;grid-template-columns:repeat(2,1fr);gap:20px;counter-reset:tool}
+    .tool{background:var(--surface);border:1px solid var(--line);border-radius:var(--radius);padding:24px 26px;box-shadow:var(--shadow-sm);counter-increment:tool}
     .tool h4{font-size:1.1rem;font-weight:600;margin-bottom:8px}
+    .tool h4::before{content:counter(tool,decimal-leading-zero);display:block;font-family:var(--display);font-size:2.3rem;color:var(--accent);line-height:1;margin-bottom:12px;letter-spacing:-.02em}
     .tool p{color:var(--ink-2);font-size:.97rem}
     .tools-foot{margin-top:34px;text-align:center;background:var(--surface);border:1px solid var(--line);border-radius:var(--radius-lg);padding:clamp(28px,3.5vw,44px);box-shadow:var(--shadow-sm)}
-    .tools-foot p{max-width:880px;margin:0 auto 24px;font-size:1.28rem;color:var(--ink);line-height:1.5}
+    .tools-foot p{max-width:880px;margin:0 auto 24px;color:var(--accent-deep);font-family:var(--display);font-style:italic;font-size:clamp(1.4rem, 1.15rem + 1vw, 1.85rem);line-height:1.4}
 
     .calc{margin-top:30px;background:var(--surface);border:1px solid var(--line);border-radius:var(--radius-lg);padding:clamp(28px,3.5vw,44px);box-shadow:var(--shadow-sm)}
     .calc h3{margin-bottom:6px}
@@ -154,7 +155,7 @@
     .lead-li{display:inline-flex;align-items:center;gap:7px;margin-top:18px;font-size:.85rem;font-weight:600;color:var(--accent-deep);text-decoration:none;border:1px solid var(--line-2);border-radius:999px;padding:8px 15px;transition:border-color .18s,background .18s,transform .18s}
     .lead-li:hover{border-color:var(--accent);background:var(--accent-soft);transform:translateY(-1px)}
     .leads-foot{margin-top:36px;display:flex;flex-direction:column;align-items:center;gap:18px;text-align:center}
-    .leads-foot p{max-width:940px;color:var(--ink);font-size:1.28rem;line-height:1.55}
+    .leads-foot p{max-width:940px;color:var(--accent-deep);font-family:var(--display);font-style:italic;font-size:clamp(1.4rem, 1.15rem + 1vw, 1.85rem);line-height:1.4}
 
     .proof-card{background:var(--surface);border:1px solid var(--line);border-radius:var(--radius-lg);padding:clamp(26px,3vw,38px);box-shadow:var(--shadow-sm)}
     .proof-card .num{font-family:var(--display);font-size:2.4rem;color:var(--accent);line-height:1}
@@ -317,6 +318,7 @@
       </div>
 
       <div class="calc reveal">
+        <p class="eyebrow">A worked example</p>
         <h3 class="h3">The Profit-Leak Calculator, working on a $1.5M agency</h3>
         <p class="cs">The exact move that makes a retainer feel like an obvious decision instead of monthly advice.</p>
         <div class="calc-steps">
@@ -398,41 +400,8 @@
     </div>
   </section>
 
-  <!-- 90 DAY PLAN -->
-  <section>
-    <div class="shell">
-      <div class="sec-head reveal">
-        <p class="eyebrow">The 90 days</p>
-        <h2 class="h2">The rebuild plan, week by week.</h2>
-        <p class="lead">Discovery, then three engines, then integration. You keep the judgment; the firm keeps the capacity. If you book the audit, we validate the assumptions together first.</p>
-      </div>
-      <div class="timeline">
-        <div class="tl reveal">
-          <div class="tl-when">Weeks 1–2<span>Extract</span></div>
-          <div><h4>Extract Adam's CFO method and engagement architecture</h4><p>Map the flow from first agency call through diagnostic, Pricing Intensive, and 1:1 CFO retainer. Extract how you read client profitability, service-line margin, utilization, pricing gaps, and owner decision quality. Lock the conversion logic and disqualification rules.</p><span class="deliv">Deliverable: <b>signed scope, agency-fit rubric, and proposal lane menu</b></span></div>
-        </div>
-        <div class="tl reveal">
-          <div class="tl-when">Weeks 3–6<span>Engine 1</span></div>
-          <div><h4>Agency CFO Monthly Profitability Engine (Bottleneck 1)</h4><p>Build the intake and the monthly owner pack: client profitability, service-line margin, utilization, pricing flags, pipeline coverage, cash forecast, and decision log. Add an exception layer so you review the questions, not rebuild every dashboard. Backtest against a real account first.</p><span class="deliv">Deliverable: <b>a repeatable pack that drops production from 10–20 hrs to 4–7 hrs of review</b></span></div>
-        </div>
-        <div class="tl reveal">
-          <div class="tl-when">Weeks 7–10<span>Engine 2</span></div>
-          <div><h4>Digital Agency Origination Engine (Bottleneck 2)</h4><p>Build the account universe, the signal scanner across hiring, new service lines, awards, acquisitions, and founder content, and the decision-maker enrichment. Backtest against your best current retainers: would it have surfaced them before the need became obvious?</p><span class="deliv">Deliverable: <b>8 to 12 high-fit owners a month with trigger, source, pain, and opener</b></span></div>
-        </div>
-        <div class="tl reveal">
-          <div class="tl-when">Weeks 3–12<span>Engine 3</span></div>
-          <div><h4>Proposal &amp; Conversion Acceleration System (Bottleneck 3)</h4><p>Turn call notes into a structured problem map, build the profit-leak calculator so value is visible before the fee, and generate a same-day proposal with three scope lanes plus a dated follow-up sequence.</p><span class="deliv">Deliverable: <b>a warm owner gets a tailored 90-day CFO plan the same day</b></span></div>
-        </div>
-        <div class="tl reveal">
-          <div class="tl-when">Weeks 11–12<span>Handover</span></div>
-          <div><h4>Integration, live shadow, and handover</h4><p>Run the production engine on a real retainer and the signal desk for one live cycle. Compare packs, proposals, and outreach against your actual judgment. Document, train, and hand over, with 30 days of post-handover monitoring.</p><span class="deliv">Deliverable: <b>you own every system outright, no ongoing dependency</b></span></div>
-        </div>
-      </div>
-    </div>
-  </section>
-
   <!-- IMPACT + ROI -->
-  <section class="sec-alt">
+  <section>
     <div class="shell">
       <div class="sec-head reveal">
         <p class="eyebrow">The math</p>
@@ -466,6 +435,39 @@
             <tr class="total"><td>Incremental annual revenue</td><td>$0</td><td>$100K–$250K planning range</td><td>Clears the 30 to 50% lift</td></tr>
           </tbody>
         </table>
+      </div>
+    </div>
+  </section>
+
+  <!-- 90 DAY PLAN -->
+  <section class="sec-alt">
+    <div class="shell">
+      <div class="sec-head reveal">
+        <p class="eyebrow">The 90 days</p>
+        <h2 class="h2">The rebuild plan, week by week.</h2>
+        <p class="lead">Discovery, then three engines, then integration. You keep the judgment; the firm keeps the capacity. If you book the audit, we validate the assumptions together first.</p>
+      </div>
+      <div class="timeline">
+        <div class="tl reveal">
+          <div class="tl-when">Weeks 1–2<span>Extract</span></div>
+          <div><h4>Extract Adam's CFO method and engagement architecture</h4><p>Map the flow from first agency call through diagnostic, Pricing Intensive, and 1:1 CFO retainer. Extract how you read client profitability, service-line margin, utilization, pricing gaps, and owner decision quality. Lock the conversion logic and disqualification rules.</p><span class="deliv">Deliverable: <b>signed scope, agency-fit rubric, and proposal lane menu</b></span></div>
+        </div>
+        <div class="tl reveal">
+          <div class="tl-when">Weeks 3–6<span>Engine 1</span></div>
+          <div><h4>Agency CFO Monthly Profitability Engine (Bottleneck 1)</h4><p>Build the intake and the monthly owner pack: client profitability, service-line margin, utilization, pricing flags, pipeline coverage, cash forecast, and decision log. Add an exception layer so you review the questions, not rebuild every dashboard. Backtest against a real account first.</p><span class="deliv">Deliverable: <b>a repeatable pack that drops production from 10–20 hrs to 4–7 hrs of review</b></span></div>
+        </div>
+        <div class="tl reveal">
+          <div class="tl-when">Weeks 7–10<span>Engine 2</span></div>
+          <div><h4>Digital Agency Origination Engine (Bottleneck 2)</h4><p>Build the account universe, the signal scanner across hiring, new service lines, awards, acquisitions, and founder content, and the decision-maker enrichment. Backtest against your best current retainers: would it have surfaced them before the need became obvious?</p><span class="deliv">Deliverable: <b>8 to 12 high-fit owners a month with trigger, source, pain, and opener</b></span></div>
+        </div>
+        <div class="tl reveal">
+          <div class="tl-when">Weeks 3–12<span>Engine 3</span></div>
+          <div><h4>Proposal &amp; Conversion Acceleration System (Bottleneck 3)</h4><p>Turn call notes into a structured problem map, build the profit-leak calculator so value is visible before the fee, and generate a same-day proposal with three scope lanes plus a dated follow-up sequence.</p><span class="deliv">Deliverable: <b>a warm owner gets a tailored 90-day CFO plan the same day</b></span></div>
+        </div>
+        <div class="tl reveal">
+          <div class="tl-when">Weeks 11–12<span>Handover</span></div>
+          <div><h4>Integration, live shadow, and handover</h4><p>Run the production engine on a real retainer and the signal desk for one live cycle. Compare packs, proposals, and outreach against your actual judgment. Document, train, and hand over, with 30 days of post-handover monitoring.</p><span class="deliv">Deliverable: <b>you own every system outright, no ongoing dependency</b></span></div>
+        </div>
       </div>
     </div>
   </section>
