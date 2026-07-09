@@ -234,6 +234,32 @@
       .cstep{grid-template-columns:34px 1fr;gap:12px}
     }
     @media (prefers-reduced-motion:reduce){.reveal{opacity:1;transform:none}}
+
+    /* cost comparison */
+    .cost-grid{display:grid;grid-template-columns:1fr 1fr;gap:22px;align-items:stretch}
+    @media(max-width:860px){.cost-grid{grid-template-columns:1fr}}
+    .cost-card{background:var(--surface);border:1px solid var(--line);border-radius:var(--radius-lg);padding:clamp(28px,3.2vw,42px);box-shadow:var(--shadow-sm);display:flex;flex-direction:column}
+    .cost-card.is-us{background:var(--accent);color:var(--on-rich);border-color:var(--accent)}
+    .cost-card .ct-k{font-size:1.02rem;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:var(--accent);margin-bottom:6px}
+    .cost-card.is-us .ct-k{color:var(--on-rich);opacity:.85}
+    .cost-card h3{margin-bottom:20px}
+    .cost-card.is-us h3{color:#fff}
+    .role{display:flex;justify-content:space-between;gap:16px;padding:13px 0;border-top:1px solid var(--line)}
+    .role:first-of-type{border-top:none}
+    .role .r-fn{color:var(--ink-2);font-size:.97rem;line-height:1.4}
+    .role .r-fn b{color:var(--ink);font-weight:600;display:block}
+    .role .r-amt{font-family:var(--display);font-size:1.15rem;color:var(--ink);white-space:nowrap}
+    .cost-total{display:flex;justify-content:space-between;gap:16px;margin-top:16px;padding-top:18px;border-top:2px solid var(--line-2);font-weight:600}
+    .cost-total .t-amt{font-family:var(--display);font-size:1.5rem;color:var(--accent-deep)}
+    .cost-year{margin-top:10px;text-align:right;color:var(--ink-2);font-size:.98rem}
+    .cost-year b{color:var(--accent-deep);font-weight:600}
+    .us-price{font-family:var(--display);font-size:clamp(2.6rem,2rem+2vw,3.6rem);line-height:1;margin:6px 0 4px;color:#fff}
+    .us-sub{opacity:.92;font-size:1.02rem}
+    .us-list{list-style:none;margin:22px 0 0;padding:0;display:grid;gap:11px}
+    .us-list li{display:flex;gap:10px;align-items:flex-start;font-size:1rem;opacity:.96;line-height:1.45}
+    .us-list li::before{content:'';flex:none;width:20px;height:20px;margin-top:1px;background:no-repeat center/contain;background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23ffffff' stroke-width='2.6' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M20 6 9 17l-5-5'/%3E%3C/svg%3E")}
+    .cost-save{margin-top:26px;text-align:center;font-family:var(--display);font-size:clamp(1.3rem,1.1rem+1vw,1.7rem);color:var(--accent-deep);line-height:1.4}
+    .cost-note{margin-top:12px;text-align:center;font-size:.9rem;color:var(--ink-3);font-style:italic;font-family:var(--display)}
   </style>
 </head>
 <body>
@@ -452,6 +478,45 @@
           </tbody>
         </table>
       </div>
+    </div>
+  </section>
+
+  <!-- COST COMPARISON -->
+  <section class="sec-ivory">
+    <div class="shell">
+      <div class="sec-head reveal">
+        <p class="eyebrow">The cost of capacity</p>
+        <h2 class="h2">Five hires, or one system.</h2>
+        <p class="lead">To cover all of this with people, you'd staff five roles. Here is that payroll against the build, side by side.</p>
+      </div>
+      <div class="cost-grid">
+        <div class="cost-card reveal">
+          <p class="ct-k">Do it with hires</p>
+          <h3 class="h3">Five people, one function each</h3>
+          <div class="role"><span class="r-fn"><b>Business development rep</b>Finds acquirers and searchers with live deals</span><span class="r-amt">$2K/mo</span></div>
+          <div class="role"><span class="r-fn"><b>Diligence analyst</b>Assembles each QoE databook by hand</span><span class="r-amt">$2K/mo</span></div>
+          <div class="role"><span class="r-fn"><b>Staff accountant</b>Runs the monthly post-close owner packs</span><span class="r-amt">$2K/mo</span></div>
+          <div class="role"><span class="r-fn"><b>Billing and AR clerk</b>Chases unbilled work and revenue leaks</span><span class="r-amt">$2K/mo</span></div>
+          <div class="role"><span class="r-fn"><b>Proposals coordinator</b>Scopes and prices every engagement</span><span class="r-amt">$2K/mo</span></div>
+          <div class="cost-total"><span>Five hires</span><span class="t-amt">$10K/mo</span></div>
+          <div class="cost-year">That is <b>$120K a year</b> in payroll, before hiring, ramp, and turnover.</div>
+        </div>
+        <div class="cost-card is-us reveal">
+          <p class="ct-k">Work with us</p>
+          <h3 class="h3">One system runs all five functions</h3>
+          <div class="us-price">$3K<span style="font-size:1.4rem">/mo</span></div>
+          <div class="us-sub">That is $36K a year. All five functions, one build, handed to you.</div>
+          <ul class="us-list">
+            <li>Finds your next diligence client and hands you the opener</li>
+            <li>Drafts each QoE databook for a review pass, not a rebuild</li>
+            <li>Produces the monthly owner packs and flags the revenue leaks</li>
+            <li>Scopes and prices every proposal the same day</li>
+            <li>No hiring, no managing, no turnover, and you own it outright</li>
+          </ul>
+        </div>
+      </div>
+      <p class="cost-save reveal">Same work covered, about <b>$84K a year</b> less, and the outcome is guaranteed.</p>
+      <p class="cost-note reveal">Illustrative at $2K a month per hire. Your real fully-loaded cost per role is usually higher.</p>
     </div>
   </section>
 
